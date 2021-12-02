@@ -15,8 +15,6 @@ async def on_ready():
 
 async def detectoffline():
   await client.wait_until_ready()
-  # Put bot token here
-  bottoken=''
   # Put channel id here
   botid=''
   # Put time zone here
@@ -55,6 +53,9 @@ async def detectoffline():
       else:
         pass
     await asyncio.sleep(60)
+
+# Put bot token here
+bottoken=''
 
 client.loop.create_task(detectoffline())
 client.run(bottoken)
